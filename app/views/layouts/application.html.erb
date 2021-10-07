@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
   <head>
     <title>Imgmod</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,7 +10,12 @@
     <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column h-100">
     <%= yield %>
+    <footer class="footer mt-auto py-3 bg-light text-center">
+      <div class="container align-items-center">
+        <span class="text-muted">Developed by <%= image_tag("nc-logo.png", height: '40px', alt: "Logo NC", class:"mx-auto") %></span>
+      </div>
+    </footer>
   </body>
 </html>
